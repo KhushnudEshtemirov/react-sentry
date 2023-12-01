@@ -2,9 +2,16 @@ import "./App.css";
 
 function App() {
   return (
-    <div id="app">
-      <h1>Hello World</h1>
-    </div>
+    <>
+      <button
+        type="button"
+        onClick={() => {
+          throw new Error("Sentry Test Error");
+        }}
+      >
+        Break the world
+      </button>
+    </>
   );
 }
 

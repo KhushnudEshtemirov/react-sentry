@@ -1,9 +1,10 @@
 import { createRoot } from "react-dom/client";
+import React from "react";
 import * as Sentry from "@sentry/react";
 import App from "./App";
 
 Sentry.init({
-  dsn: "https://examplePublicKey@o0.ingest.sentry.io/0",
+  dsn: "https://84531d25957155ee5697fb956fc98ef6@o4506262038052864.ingest.sentry.io/4506262061383680",
   integrations: [
     new Sentry.BrowserTracing({
       tracePropagationTargets: ["localhost", /^https:\/\/yourserver\.io\/api/],
@@ -17,6 +18,8 @@ Sentry.init({
   replaysOnErrorSampleRate: 1.0,
 });
 
-const container = document.getElementById("app");
-const root = createRoot(container);
-root.render(<App />);
+createRoot(document.getElementById("root")!).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
