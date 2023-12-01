@@ -6,7 +6,7 @@ function App() {
       <button
         type="button"
         onClick={() => {
-          throw new Error("Sentry Test Error");
+          throw new Error("Production sentry error");
         }}
       >
         Break the world
